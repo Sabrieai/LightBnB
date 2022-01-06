@@ -23,7 +23,7 @@ const getUserWithEmail = function(email) {
   const values = [email];
 
   return pool.query(queryString, values)
-    .then((result) => result.rows[0])
+    .then((result) => result.rows[0] || null)
     .catch((error) => {
       console.log(error.message);
     });
@@ -40,7 +40,7 @@ const getUserWithId = function(id) {
   const values = [id];
 
   return pool.query(queryString, values)
-    .then((result) => result.rows[0])
+    .then((result) => result.rows[0] || null)
     .catch((error) => {
       console.log(error.message);
     });
@@ -61,7 +61,7 @@ const addUser =  function(users) {
   const values = [users.name,users.email,users.password];
 
   return pool.query(queryString, values)
-    .then((result) => result.rows[0])
+    .then((result) => result.rows[0] || null)
     .catch((error) => {
       console.log(error.message);
     });
