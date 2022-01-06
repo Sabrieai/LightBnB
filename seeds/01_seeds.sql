@@ -15,7 +15,7 @@ VALUES('2021-01-28','2021-02-28',1,2),
 ('2021-05-20','2021-05-05',3,3),
 ('2021-10-25','2001-11-02',3,1);
 
-INSERT INTO property_reviews (guest_id,property_id,reservations_id,rating,message)
+INSERT INTO property_reviews (guest_id,property_id,reservation_id,rating,message)
 VALUES(1,3,4,5,'good'),
 (2,1,1,2,'ok'),
 (3,3,3,5,'big'),
